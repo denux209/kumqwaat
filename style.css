@@ -1,0 +1,263 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: url('images/bangkok_wsc.jpg') no-repeat center center/cover;
+    background-color: white;
+    line-height: 1.6;
+    vertical-align: center;
+}
+    
+  
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.container a{
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background-color: #6c5ce7;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: all ease 0.1s;
+    box-shadow: 0px 5px 0px 0px #a29bfe;
+
+
+}
+.container a:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px #a29bfe;
+}
+.toolbar {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    justify-content: center; /* Horizontally center items */
+    flex-direction: column; /* Stack the title and links vertically */
+    background-color: #b91705; /* Toolbar background color */
+    color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Ensure all text is centered */
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.toolbar h2 {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.toolbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    gap: 15px; /* Spacing between links */
+    justify-content: center; /* Center links horizontally */
+}
+
+.toolbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.toolbar ul li a:hover {
+    background-color: #a41404d8; /* Darker shade on hover */
+}
+
+footer {
+    position: fixed; /* Ekrana sabitle */
+    bottom: 0; /* Sayfanın en altına yerleştir */
+    left: 0;
+    width: 100%;
+    
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+footer a {
+    color: white;
+}
+
+/* Header */
+header {
+    background-color: rgb(207, 31, 64);
+    /* background-image: ; */
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1,
+header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: rgb(174, 26, 53);
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Sidebar */
+
+
+/* Buttons */
+button {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* Menü dikey olsun */
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    header nav ul li {
+        margin: 5px 0; /* Linkler arasına boşluk bırak */
+    }
+
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+}
+/* dslfkjşsdkfjşldifjsdlfjisdlfjdsfjsd */
+header {
+    background: #0044cc;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 📌 Mobilde Menüyü Başlangıçta Gizle */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background: #0044cc;
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+
+.nav-links.active {
+    display: flex; /* Butona basınca görünür hale gelir */
+}
+
+/* 📌 Menü Butonu Stili */
+/* .menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+} */
+
+/* 📌 Ekran 768px'den küçükse Butonu Göster ve Menüyü Gizle */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Mobilde başlangıçta gizli */
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex; /* Butona basınca açılacak */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
